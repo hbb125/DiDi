@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>客户注册</title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_1579712_7km7axi1dqe.css">
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style>
+			.padd{
+				padding: 15px;
+				text-align: center;
+			}
+			.body{
+				color: #FFFFFF;
+			}
+			.mui-title{
+				font-size: 20px;
+			}
+			.mui-btn {
+				padding: 15px;
+				width: 100%;
+				font-size: 20px;
+			}
+			.mui-bar-nav{
+				background: #007aff;
+			}
+			.mui-icon-left-nav{
+				color: white;
+			}
+			.mui-bar-tab{
+			   background: #000000;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav ">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title ">注册客户</h1>
+		</header>
+		<br /><br />
+		<form class="mui-input-group">
+			<div >
+				
+			</div><br>
+			<div class="mui-input-row">
+				<label>客户姓名：</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入">
+			</div><br />
+			<div class="mui-input-row">
+				<label>&nbsp;&nbsp;&nbsp;手机号：</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入">
+			</div><br />
+			<div class="mui-input-row">
+				<label>身份证号：</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入">
+			</div><br />
+          
+            	<div class="mui-input-row">
+            		<label>客户类型：</label>
+            		<!-- <input type="text" class="mui-input-clear" placeholder="请输入"> -->
+					<select name="" id="">
+							<option value="1">钻石会员</option>
+							<option value="2">黄金会员</option>
+							<option value="3">普通会员</option>
+						</select>
+            	</div><br>
+          <!--  <div>
+            	<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            	<input name="radio1" type="radio">男&nbsp;&nbsp;&nbsp;&nbsp;
+				<input name="radio1" type="radio">女
+			</div><br> -->
+			<div class="mui-input-row">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" id="" value="" />男
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" id="" value="" />女
+			</div><br>
+            <div class="mui-input-row">
+            	<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email：</label>
+            	<input type="text" class="mui-input-clear" placeholder="请输入">
+            </div><br>
+			<div class="mui-input-row">
+				<label>&nbsp;联系地址：</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入">
+			</div><br>
+			<div class="padd">
+			<input type="radio">我已同意以下条款<a href="http://static.udache.com/gulfstream/webapp/pages/use-items.html" style="color: #007AFF;">《用户使用协议》
+			</div>
+			<div>
+		    <a href="./denglu.html"><button type="button" class="mui-btn mui-btn-primary">完成注册</button></a>
+			</div>
+		</form>
+		<nav class="mui-bar mui-bar-tab">
+				<a class="mui-tab-item " href="./index.html">
+					<span class="mui-icon icon-shouye iconfont"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item" href="./zuanshi.html">
+					<span class="mui-icon icon-chaxunchuangyebankaitongqingkuang iconfont"></span>
+					<span class="mui-tab-label">创业项目</span>
+				</a>
+				<a class="mui-tab-item" href="./progress.html">
+					<span class="mui-icon icon-liucheng iconfont"></span>
+					<span class="mui-tab-label">报名流程</span>
+				</a>
+				<a class="mui-tab-item" href="./fengcai.html">
+					<span class="mui-icon icon-wendang iconfont"></span>
+					<span class="mui-tab-label">平台风采</span>
+				</a>
+				<a class="mui-tab-item" href="./geren.html">
+					<span class="mui-icon icon-wode iconfont"></span>
+					<span class="mui-tab-label">我的滴滴</span>
+				</a>
+			</nav>
+	
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui("body").on("tap", "a", function() {
+			document.location.href = this.href;
+		})
+	</script>
+</html>

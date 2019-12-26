@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>账户余额</title>
+		<link rel="shortcuticon" href="/favicon.ico" type="image/x-icon" />
+		<!-- 引入压缩之后的css文件 -->
+		<!-- <link href="css/mui.min.css" rel="stylesheet" /> -->
+
+		<!-- 引入没有压缩的css文件 -->
+		<link rel="stylesheet" href="./css/mui.css">
+		<style>
+		</style>
+		<!-- 引入阿里的字体图标 -->
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_1579409_mcpn9pwk5k.css">
+		<style>
+			.wrapper{
+				padding: 25px;
+			}
+		</style>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+
+		<style>
+			.icon-wode {
+				/* color: orange; */
+			}
+			
+			.mui-pull-left{
+				color: #FFFFFF;
+			}
+			.mui-title{
+				color:#FFFFFF;
+			}
+			.mui-bar-tab{
+			   background: #000000;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+	<header id="header" class="mui-bar mui-bar-nav" style="background-color: #007aff" >
+				<a class="mui-action-back mui-icon mui-icon-left-nav 
+				mui-pull-left"></a>
+				<h1 class="mui-title">账户余额</h1>
+	</header>
+
+					
+			
+				<br>		
+					<br>	
+					<br><br>
+			
+			
+								<div >
+									<p><font size="2" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的余额(元)</font></p>
+									<section class="old_pice" >					
+														<p class="head-font"></p><br/>
+														<p> <font size="6" color="#CF2D28">&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp; ￥15000.00  </font></p>
+														
+													</section>
+									
+									</div>
+			<br/><br/><br/><br/>
+								
+								<div class="mui-button-row">
+									<button type="button" class="mui-btn mui-btn-primary" onclick="return false;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;充&nbsp值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+								</div>
+<div class="mui-button-row" >
+									<a href="./tixian.html"><button type="button" class="mui-btn mui-btn-primary" onclick="return false;" style="background-color: white"><font size="" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提&nbsp现&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></button></a>
+									
+								</div>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			
+			<p style="text-align: center;"><font size="2" color="#CF2D28">常见问题</font></p>
+			 <p style="text-align: center;"><font size="1">本服务由滴滴财务提供</font></p>
+			<div class="mui-content">	
+			
+				<nav class="mui-bar mui-bar-tab">
+					<a class="mui-tab-item " href="./index.html">
+						<span class="mui-icon icon-shouye iconfont"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-icon icon-chaxunchuangyebankaitongqingkuang iconfont"></span>
+						<span class="mui-tab-label">创业项目</span>
+					</a>
+					<a class="mui-tab-item" href="./progress.html">
+						<span class="mui-icon icon-liucheng iconfont"></span>
+						<span class="mui-tab-label">报名流程</span>
+					</a>
+					<a class="mui-tab-item" href="./fengcai.html">
+						<span class="mui-icon icon-wendang iconfont"></span>
+						<span class="mui-tab-label">平台风采</span>
+					</a>
+					<a class="mui-tab-item  mui-active" href="./geren.html">
+						<span class="mui-icon icon-wode iconfont"></span>
+						<span class="mui-tab-label">我的滴滴</span>
+					</a>
+				</nav>
+
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		// mui中屏蔽了点击事件，下面的代码表示不让它屏蔽点击事件
+		mui("body").on("tap","a",function(){
+			document.location.href = this.href;
+		})
+	</script>
+</html>

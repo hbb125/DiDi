@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>新闻公告</title>
+		<link rel="shortcuticon" href="/favicon.ico" type="image/x-icon" />
+		<!-- 引入压缩之后的css文件 -->
+		<!-- <link href="css/mui.min.css" rel="stylesheet" /> -->
+
+		<!-- 引入没有压缩的css文件 -->
+		<link rel="stylesheet" href="./css/mui.css">
+		<style>
+		</style>
+		<!-- 引入阿里的字体图标 -->
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_1579409_mcpn9pwk5k.css">
+		<style>
+			.wrapper{
+				padding: 25px;
+			}
+		</style>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+
+		<style>
+			
+			
+			.mui-pull-left{
+				color: #FFFFFF;
+			}
+			.mui-title{
+				color:#FFFFFF;
+			}
+			.mui-bar-tab{
+			   background: #000000;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+	<header id="header" class="mui-bar mui-bar-nav" style="background-color: #007aff" >
+				<a class="mui-action-back mui-icon mui-icon-left-nav 
+				mui-pull-left"></a>
+				<h1 class="mui-title">新闻公告</h1>
+	</header>
+	<div class="mui-content">
+		<ul class="mui-table-view mui-table-view-chevron">
+			<li id="switch" class="mui-table-view-cell">
+				定时轮播
+				<div class="mui-switch">
+					<div class="mui-switch-handle"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div id="slider" class="mui-slider" >
+		<div class="mui-slider-group mui-slider-loop">
+			<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+			<div class="mui-slider-item mui-slider-item-duplicate">
+				<a href="#">
+					<img src="./image/7.jpg">
+				</a>
+			</div>
+			<!-- 第一张 -->
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="./image/3.jpg">
+				</a>
+			</div>
+			<!-- 第二张 -->
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="./image/6.jpg">
+				</a>
+			</div>
+			<!-- 第三张 -->
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="./image/7.jpg">
+				</a>
+			</div>
+			<!-- 第四张 -->
+			<div class="mui-slider-item">
+				<a href="#">
+					<img src="./image/3.jpg">
+				</a>
+			</div>
+			<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+			<div class="mui-slider-item mui-slider-item-duplicate">
+				<a href="#">
+					<img src="./image/5.jpg">
+				</a>
+			</div>
+		</div>
+		<div class="mui-slider-indicator">
+			<div class="mui-indicator mui-active"></div>
+			<div class="mui-indicator"></div>
+			<div class="mui-indicator"></div>
+			<div class="mui-indicator"></div>
+		</div>
+	</div>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		var slider = mui("#slider");
+		document.getElementById("switch").addEventListener('toggle', function(e) {
+			if (e.detail.isActive) {
+				slider.slider({
+					interval: 5000
+				});
+			} else {
+				slider.slider({
+					interval: 0
+				});
+			}
+		});
+	</script>
+			
+			       
+						
+						<div class="mui-card" style="margin-bottom: 35px;">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell mui-media">
+									<a href="./gonggao2.html">
+										<img class="mui-media-object mui-pull-right" src="./image/6666.jpg">
+										<div class="mui-media-body">
+											细节之处见文明 暖心之举显风采
+											<p class="mui-ellipsis">南湖汽车站志愿者服务点
+绵阳新闻网讯作为绵阳城市形象的展示平台，窗口单位的服务直接关乎绵阳形象,一句暖心问候、一个会心微笑，一杯热水都让办事群众心里倍感温暖。</p>
+										</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media">
+									<a href="./gonggao2.html">
+										<img class="mui-media-object mui-pull-right" src="./image/6.jpg">
+										<div class="mui-media-body">
+											民航医院伤医事件最新进展
+											<p class="mui-ellipsis">在市中心医院、市三医院、市中医医院、市骨科医院等，文明城市对标对点图，社会主义核心价值观宣传处处可见。在门诊大厅内，志愿服务热情周到、医务人员有条不紊地完成工作，</p>
+										</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media">
+									<a href="./gonggao2.html">
+										<img class="mui-media-object mui-pull-right" src="./image/3.jpg">
+										<div class="mui-media-body">
+											伊朗用人民币替代美元后，或又取得去美元化的突破，马来西亚支持
+											<p class="mui-ellipsis">对于美元不断对一些市场采取金融限制，石油国伊朗经济在去美元化的布局上不断突破。事情的最新进展 ，据美联社当地时间12月19日报道，伊朗希望创造数字货币，以作为对抗美元和去美元化的手段之一。</p>
+										</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media">
+									<a href="./gonggao2.html">
+										<img class="mui-media-object mui-pull-right" src="./image/7.jpg">
+										<div class="mui-media-body">
+											民警帮出租车司机找回资格证
+											<p class="mui-ellipsis">据23日最新消息，菲律宾计划重启中断已久的核能项目，以应对未来电力供应紧张所带来的挑战。</p>
+										</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media">
+									<a href="./gonggao2.html">
+										<img class="mui-media-object mui-pull-right" src="./image/5.jpg">
+										<div class="mui-media-body">
+											签29项协议后，菲律宾又寻求与华合作！越南已向中国进口21亿度电
+											<p class="mui-ellipsis">近年来，菲律宾积极和中国开展多项合作。除了将其三大铁路项目交由中企承建之外，菲律宾还和我国成立了油气勘探合作委员会，并一举签下29项合作协议，涉及贸易、投资、基建、教育等多个领域。而近日，菲律宾又开始寻求和中国的合作。</p>
+										</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media">
+									<a href="./gonggao2.html">
+										<img class="mui-media-object mui-pull-right" src="./image/6.jpg">
+											页岩气勘探再获重大突破，四川探明储量千亿方，将建10亿方产能
+											<p class="mui-ellipsis">据23日最新消息，菲律宾计划重启中断已久的核能项目，以应对未来电力供应紧张所带来的挑战。</p>
+										</div>
+									</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					
+			
+						
+						
+					
+				</div>
+			<div class="mui-content">	
+			
+			<nav class="mui-bar mui-bar-tab">
+				<a class="mui-tab-item " href="./index.html">
+					<span class="mui-icon icon-shouye iconfont"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item">
+					<span class="mui-icon icon-chaxunchuangyebankaitongqingkuang iconfont"></span>
+					<span class="mui-tab-label">创业项目</span>
+				</a>
+				<a class="mui-tab-item" href="./progress.html">
+					<span class="mui-icon icon-liucheng iconfont"></span>
+					<span class="mui-tab-label">报名流程</span>
+				</a>
+				<a class="mui-tab-item  mui-active" href="./fengcai.html">
+					<span class="mui-icon icon-wendang iconfont"></span>
+					<span class="mui-tab-label">平台风采</span>
+				</a>
+				<a class="mui-tab-item" href="./geren.html">
+					<span class="mui-icon icon-wode iconfont"></span>
+					<span class="mui-tab-label">我的滴滴</span>
+				</a>
+			</nav>
+			
+
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		// mui中屏蔽了点击事件，下面的代码表示不让它屏蔽点击事件
+		mui("body").on("tap","a",function(){
+			document.location.href = this.href;
+		})
+	</script>
+</html>

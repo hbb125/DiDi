@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>快速注册</title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_1579712_7km7axi1dqe.css">
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style>
+			.padd{
+				padding: 15px;
+				text-align: center;
+			}
+			.body{
+				color: #FFFFFF;
+			}
+			.mui-title{
+				font-size: 20px;
+			}
+			.mui-btn {
+				padding: 15px;
+				width: 100%;
+				font-size: 20px;
+			}
+			.mui-bar-nav{
+				background: #007aff;
+			}
+			.mui-icon-left-nav{
+				color: white;
+			}
+			.k{
+				float: right;
+				height: 42px;
+				width: 127px;
+				color: white;
+				background: orangered;
+			}
+			.mui-bar-tab{
+               background: #000000;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav ">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title ">快速注册</h1>
+		</header>
+		<br /><br />
+		<form class="mui-input-group">
+			<div>
+
+			</div><br>
+			<div class="mui-input-row">
+				<label>客户姓名：</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入">
+			</div><br />
+			<div class="mui-input-row">
+				<label>&nbsp;&nbsp;&nbsp;手机号：</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入">
+			</div><br />
+			<div class="mui-input-row">
+				<label>身份证号：</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入">
+			</div><br />
+
+			<div class="mui-input-row">
+				<label>客户类型：</label>
+				<!-- <input type="text" class="mui-input-clear" placeholder="请输入"> -->
+				<select name="" id="">
+					<option value="1">钻石会员</option>
+					<option value="2">黄金会员</option>
+					<option value="3">普通会员</option>
+				</select>
+			</div><br>
+			<div class="mui-input-row">
+				<label>&nbsp;&nbsp;&nbsp;验证码：</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入">
+			</div>
+			<div style="text-align: right;">
+				<canvas id="canvas" width="120" height="40"></canvas><br />
+				<input type="hidden" id="text">
+				<input type="hidden" value="" id="bt">
+				<script>
+					var canvas = document.getElementById("canvas");//演员
+        var context = canvas.getContext("2d");//舞台，getContext() 方法可返回一个对象，该对象提供了用于在画布上绘图的方法和属性。
+        var button = document.getElementById("bt");//获取按钮
+        var input = document.getElementById("text");//获取输入框
+        draw();
+        canvas.onclick = function () {
+            context.clearRect(0, 0, 120, 40);//在给定的矩形内清除指定的像素
+            draw();
+        }
+        // 随机颜色函数
+        function getColor() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            return "rgb(" + r + "," + g + "," + b + ")";
+        }
+        function draw() {
+            context.strokeRect(0, 0, 120, 40);//绘制矩形（无填充）
+            var aCode = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+            // 绘制字母
+            var arr = [] //定义一个数组用来接收产生的随机数
+            var num //定义容器接收验证码
+            for (var i = 0; i < 4; i++) {
+                var x = 20 + i * 20;//每个字母之间间隔20
+                var y = 20 + 10 * Math.random();//y轴方向位置为20-30随机
+                var index = Math.floor(Math.random() * aCode.length);//随机索引值
+                var txt = aCode[index];
+                context.font = "bold 20px 微软雅黑";//设置或返回文本内容的当前字体属性
+                context.fillStyle=getColor();//设置或返回用于填充绘画的颜色、渐变或模式，随机
+                context.translate(x,y);//重新映射画布上的 (0,0) 位置，字母不可以旋转移动，所以移动容器
+                var deg=90*Math.random()*Math.PI/180;//0-90度随机旋转
+                context.rotate(deg);// 	旋转当前绘图
+                context.fillText(txt, 0, 0);//在画布上绘制“被填充的”文本
+                context.rotate(-deg);//将画布旋转回初始状态
+                context.translate(-x,-y);//将画布移动回初始状态
+                arr[i] = txt //接收产生的随机数
+            }
+            num = arr[0] + arr[1] + arr[2] + arr[3] //将产生的验证码放入num
+            // 绘制干扰线条
+            for (var i = 0; i < 8; i++) {
+                context.beginPath();//起始一条路径，或重置当前路径
+                context.moveTo(Math.random() * 120, Math.random() * 40);//把路径移动到画布中的随机点，不创建线条
+                context.lineTo(Math.random() * 120, Math.random() * 40);//添加一个新点，然后在画布中创建从该点到最后指定点的线条
+                context.strokeStyle=getColor();//随机线条颜色
+                context.stroke();// 	绘制已定义的路径
+            }
+            // 绘制干扰点，和上述步骤一样，此处用长度为1的线代替点
+            for (var i = 0; i < 20; i++) {
+                context.beginPath();
+                var x = Math.random() * 120;
+                var y = Math.random() * 40;
+                context.moveTo(x, y);
+                context.lineTo(x + 1, y + 1);
+                context.strokeStyle=getColor();
+                context.stroke();
+            }
+    
+            //点击按钮验证
+            button.onclick = function () { 
+            var text = input.value //获取输入框的值
+            if (text === num) {
+                alert('验证通过')
+            } else {
+                alert('验证失败')
+            }
+         }
+            
+        }
+    
+    </script>
+			</div>
+			<!-- <br /> -->
+			<div class="mui-input-row">
+				<label>短信验证：</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入">
+			</div>
+			<!-- <button type="button" class=" mui-btn-warning k">获取验证码（60）</button> -->
+			<button type="button" class="k">获取验证码（60）</button>
+			<br /><br />
+			<div class="padd">
+				<input type="radio" name="e" value="e">我已同意以下条款<a href="http://static.udache.com/gulfstream/webapp/pages/use-items.html" style="color: #007AFF;">《用户使用协议》</a>
+			</div>
+			<div>
+				<a href="./zhucekehu.html"><button type="button" class="mui-btn mui-btn-primary">申请注册</button></a>
+			</div>
+		</form>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item " href="./index.html">
+				<span class="mui-icon icon-shouye iconfont"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="./zuanshi.html">
+				<span class="mui-icon icon-chaxunchuangyebankaitongqingkuang iconfont"></span>
+				<span class="mui-tab-label">创业项目</span>
+			</a>
+			<a class="mui-tab-item" href="./progress.html">
+				<span class="mui-icon icon-liucheng iconfont"></span>
+				<span class="mui-tab-label">报名流程</span>
+			</a>
+			<a class="mui-tab-item" href="./fengcai.html">
+				<span class="mui-icon icon-wendang iconfont"></span>
+				<span class="mui-tab-label">平台风采</span>
+			</a>
+			<a class="mui-tab-item" href="./geren.html">
+				<span class="mui-icon icon-wode iconfont"></span>
+				<span class="mui-tab-label">我的滴滴</span>
+			</a>
+		</nav>
+
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui("body").on("tap", "a", function() {
+			document.location.href = this.href;
+		})
+	</script>
+</html>

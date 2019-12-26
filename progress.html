@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>报名流程</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1579712_7km7axi1dqe.css">
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+	<style type="text/css">
+		.mui-bar-nav{
+			background: #007aff;
+		}
+		.mui-icon-left-nav{
+			color: white;
+		}
+		.l{
+			margin: 0px 8px;
+		}
+	.d{
+		height 400px;
+		margin-bottom: 80px;
+	}
+	.mui-bar-tab{
+	   background: #000000;
+	}
+	.mui-bar-tab .mui-tab-item.mui-active{
+		color: red;
+	}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav ">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title ">报名流程</h1>
+	</header>
+	<div class="d">
+	<img src="./himgs/1.jpg" >
+	<div class="l">
+		<img src="./himgs/14.png" >
+	</div>
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item " href="./index.html">
+			<span class="mui-icon icon-shouye iconfont"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="./zuanshi.html">
+			<span class="mui-icon icon-chaxunchuangyebankaitongqingkuang iconfont"></span>
+			<span class="mui-tab-label">创业项目</span>
+		</a>
+		<a class="mui-tab-item mui-active">
+			<span class="mui-icon icon-liucheng iconfont"></span>
+			<span class="mui-tab-label">报名流程</span>
+		</a>
+		<a class="mui-tab-item" href="./fengcai.html">
+			<span class="mui-icon icon-wendang iconfont"></span>
+			<span class="mui-tab-label">平台风采</span>
+		</a>
+		<a class="mui-tab-item" href="./geren.html">
+			<span class="mui-icon icon-wode iconfont"></span>
+			<span class="mui-tab-label">我的滴滴</span>
+		</a>
+	</nav>
+</body>
+<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui("body").on("tap", "a", function() {
+			document.location.href = this.href;
+		})
+	</script>
+</html>
